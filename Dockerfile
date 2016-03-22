@@ -2,7 +2,7 @@ FROM debian:latest
 
 MAINTAINER Derek Chamorro <therandomsecurityguy at gmail dot com>
 
-ENV VERSION 0.9.15.6.1714-7be11e1
+ENV VERSION 0.9.16.3.1840-cece46d
 
 RUN  groupadd --gid 1001 plex \
   && useradd --system --uid 501 --gid 1001 -M --shell /usr/sbin/nologin plex \
