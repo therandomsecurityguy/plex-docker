@@ -2,13 +2,13 @@ FROM debian:latest
 
 MAINTAINER Derek Chamorro <therandomsecurityguy at gmail dot com>
 
-ENV VERSION 1.2.5.2966-3f767e7
+ENV VERSION 1.19.5.3112-b23ab3896
 
 RUN  groupadd --gid 1001 plex \
   && useradd --system --uid 501 --gid 1001 -M --shell /usr/sbin/nologin plex \
   && apt-get update \
   && apt-get -y install wget \
-  && wget https://downloads.plex.tv/plex-media-server/${VERSION}/plexmediaserver_${VERSION}_amd64.deb \
+  && wget https://downloads.plex.tv/plex-media-server-new/${VERSION}/debian/plexmediaserver_${VERSION}_amd64.deb \
   && dpkg -i plexmediaserver_${VERSION}_amd64.deb \
   && apt-get -y remove --purge wget \
   && apt-get -y autoremove --purge \
